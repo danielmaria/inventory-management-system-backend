@@ -3,8 +3,8 @@ require('dotenv').config()
 const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
-const dbConnect = require("./db/dbConnect");
-const User = require("./db/userModel");
+const dbConnect = require("./src/db/dbConnect");
+const User = require("./src/db/userModel");
 
 dbConnect();
 
@@ -25,10 +25,10 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/v1/auth", require("./routes/authRoutes"));
-app.use("/v1/locations", require("./routes/locationRoutes"));
-app.use("/v1/products", require("./routes/productsRoutes"));
-app.use("/v1/storages", require("./routes/storageRoutes"));
+app.use("/v1/auth", require("./src/routes/authRoutes"));
+app.use("/v1/locations", require("./src/routes/locationRoutes"));
+app.use("/v1/products", require("./src/routes/productsRoutes"));
+app.use("/v1/storages", require("./src/routes/storageRoutes"));
 
 async function checkAndCreateAdminUser() {
   try {
