@@ -5,6 +5,11 @@ const app = express();
 const bodyParser = require('body-parser');
 const dbConnect = require("./src/db/dbConnect");
 const User = require("./src/db/userModel");
+const PORT = process.env.PORT || 3030;
+
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
 
 dbConnect();
 
