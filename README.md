@@ -1,4 +1,5 @@
-# Inventory Management System Backend
+# 📦 Inventory Management System Backend
+[Notion page](https://danielmariadasilva.notion.site/Inventory-Management-System-68b2bf294cf34752b0f695cbfcc61f50)
 
 This project serves as the backend for an Inventory Management System, where inventory management occurs for multiple locations. It allows users to manage inventory for various locations efficiently.
 
